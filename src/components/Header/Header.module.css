@@ -1,0 +1,192 @@
+/* --- Navbar Container --- */
+.navbar-container {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    font-family: var(--navbar-font-family), sans-serif;
+    background: var(--navbar-color-gradient);
+    box-shadow: var(--navbar-box-shadow);
+    isolation: isolate;
+    z-index: 1000;
+}
+
+.navbar-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--navbar-color-gradient-hover);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: -1;
+}
+
+.navbar-container:hover::after,
+.menu-open::after {
+    opacity: 1;
+}
+
+/* --- Navbar Bar --- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--navbar-height);
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--space-5);
+}
+
+/* --- Logo --- */
+.logo {
+    font-family: var(--font-family-heading), serif;
+    color: var(--navbar-color-text);
+    font-weight: var(--font-weight-semibold);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* --- Nav Buttons --- */
+.nav-buttons {
+    color: var(--navbar-color-text);
+    display: flex;
+    gap: var(--space-4);
+}
+
+button.nav-button {
+    width: 125px;
+    color: var(--navbar-color-text);
+    background: none;
+    border: none;
+    padding-top: var(--space-2);
+    font-size: var(--navbar-font-size);
+    font-weight: var(--font-weight-medium);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.nav-button + .underline {
+    position: relative;
+    transition: opacity 0.7s ease;
+}
+
+.nav-button:hover + .underline {
+    visibility: visible;
+    opacity: 1;
+}
+
+.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.not-visible {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* --- Mega Menu --- */
+.mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    height: var(--navbar-menu-height);
+    background-color: var(--navbar-menu-color-bg);
+    border-top: 1px solid var(--navbar-color-border);
+    border-bottom: 1px solid var(--navbar-color-border);
+    box-shadow: var(--navbar-box-shadow);
+    z-index: 1000;
+}
+
+/* --- Menu Content Grid --- */
+.mega-menu-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-10) var(--space-5);
+    gap: var(--space-10);
+}
+
+/* --- Menu Columns --- */
+.menu-column h3,
+.menu-column h4 {
+    color: var(--navbar-color-heading);
+    font-size: var(--navbar-font-size-header);
+    font-weight: var(--navbar-font-weight-header);
+    margin-bottom: var(--space-4);
+    text-transform: uppercase;
+    letter-spacing: 0.2ch;
+}
+
+.menu-column ul {
+    list-style: none;
+    padding-inline: var(--space-8);
+    margin: 0;
+}
+
+.menu-column li {
+    margin-bottom: var(--space-2);
+}
+
+/* --- Column Dividers --- */
+.col-links::before,
+.col-categories::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 90%;
+    width: 1px;
+    top: -20px;
+    margin-block-start: var(--space-8);
+    background-color: var(--navbar-color-column-divider);
+}
+
+/* --- Column 1: Description --- */
+.col-description p {
+    color: var(--navbar-color-text);
+    line-height: var(--line-height-body);
+    font-weight: var(--navbar-font-weight);
+    font-size: 0.95rem;
+}
+
+/* --- Column 2: Category Buttons --- */
+.category-btn {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-md);
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--navbar-color-btn-category);
+    transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+    background-color: rgba(var(--primitive-gold-rgb), 0.2);
+}
+
+.category-btn.selected {
+    background-color: var(--navbar-color-btn-selected);
+    color: var(--navbar-color-text);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* --- Column 3: Links --- */
+.menu-link {
+    display: inline-block;
+    color: var(--navbar-color-menu-link);
+    text-decoration: none;
+    padding: var(--space-1) var(--space-3);
+    font-size: 0.95rem;
+    width: 100%;
+    border-radius: 4px;
+    transition: background 0.2s ease;
+}
+
+.menu-link:hover {
+    background-color: var(--primitive-cream-300);
+    color: var(--navbar-color-bg);
+}

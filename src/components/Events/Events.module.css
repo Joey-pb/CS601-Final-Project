@@ -1,0 +1,47 @@
+.events-container {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-bg-canvas);
+    box-shadow: var(--box-shadow-top);
+    isolation: isolate;
+    margin-block-end: var(--space-10);
+}
+
+.event-card {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    transition: scale 0.5s ease;
+}
+
+.event-card:hover {
+    box-shadow: var(--box-shadow-top);
+    scale: 1.05;
+    z-index: 900;
+}
+
+.event-card .event-text-background {
+    width: 100%;
+    height: 30%;
+    display: grid;
+    align-items: center;
+    background-color: rgba(from var(--color-bg-surface-dark) r g b / 0.7);
+}
+
+.event-card .event-text {
+    color: var(--color-text-light);
+}
+
+.event-card .event-title {
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-semibold);
+    font-size: 2rem;
+}

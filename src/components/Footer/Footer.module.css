@@ -1,0 +1,94 @@
+/* --- Footer Layout --- */
+footer {
+    height: 50vh;
+    width: 100%;
+    margin-block-start: var(--space-20);
+
+    padding-block: var(--space-10);
+    background-color: var(--color-bg-footer);
+}
+
+.footer-container {
+    max-width: var(--container-width);
+    height: 100%;
+    padding-inline: var(--space-3);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+}
+
+/* --- Footer Sections --- */
+.footer-section {
+    position: relative;
+    width: 100%;
+    color: var(--color-text-light);
+}
+
+.footer-section:nth-child(n + 2 of .footer-section)::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    margin-inline-start: calc(var(--space-10) * -1);
+    background-color: var(--color-text-light);
+}
+
+.section-heading {
+    color: var(--color-text-secondary);
+    padding-block-end: var(--space-4);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+}
+
+.address {
+    margin-block-end: var(--space-4);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
+}
+
+.section-links {
+    display: grid;
+    gap: var(--space-2);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-light);
+    text-decoration: none;
+    text-underline-offset: 0.7ch;
+}
+
+.section-links a:not(.btn):hover {
+    text-decoration: underline;
+}
+
+.btn {
+    composes: btn from '../../index.css';
+    color: var(--color-text-secondary);
+    margin-top: var(--space-3);
+}
+
+.btn:hover {
+    color: var(--color-text-secondary);
+    border: 2px solid var(--color-border-accent);
+    background-color: rgb(from var(--color-border-accent) r g b / 0.1);
+}
+
+/* --- Legal Bar --- */
+.legal {
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-light);
+    background-color: var(--color-bg-footer);
+    font-size: 0.7rem;
+    font-weight: var(--font-weight-light);
+    border-top: 1px solid var(--color-text-light);
+}
+
+.legal a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+}

@@ -1,0 +1,297 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Increase line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+/* ============================================================
+   DESIGN SYSTEM — TOKENS
+   Structure: Primitives → Semantics → Components
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. PRIMITIVES
+   Raw values. Never use directly in components.
+   ------------------------------------------------------------ */
+
+:root {
+
+    /* Color Primitives */
+    --primitive-navy: #2c3e50;
+    --primitive-navy-rgb: 44, 62, 80;
+
+    --primitive-gold: #ffde9c;
+    --primitive-gold-rgb: 255, 222, 156;
+
+    --primitive-gold-dark: #c89040;
+
+    --primitive-crimson: #B31942;
+    --primitive-crimson-rgb: 179, 25, 66;
+
+    --primitive-cream-100: #fcfaf2;
+    --primitive-cream-100-rgb: 252, 250, 242;
+
+    --primitive-cream-200: #f4eee1;
+    --primitive-cream-200-rgb: 244, 238, 225;
+
+    --primitive-cream-300: #eae0cc;
+    --primitive-cream-300-rgb: 234, 224, 204;
+
+    --primitive-brown-100: #59534f;
+    --primitive-brown-100-rgb: 89, 83, 79;
+
+    --primitive-brown-200: #4a3b32;
+    --primitive-brown-200-rgb: 74, 59, 50;
+
+    --primitive-brown-300: #231f20;
+    --primitive-brown-300-rgb: 35, 31, 32;
+
+    --primitive-charcoal: #1D1C1A;
+
+    /* Typography Primitives */
+    --primitive-font-main: 'Inter';
+    --primitive-font-heading: 'Cinzel';
+    --primitive-font-accent: 'Ballet';
+
+
+    /* ------------------------------------------------------------
+       2. SEMANTIC TOKENS
+       Assign meaning to primitives. Use these in components.
+       ------------------------------------------------------------ */
+
+    /* --- Surfaces --- */
+    --color-bg-canvas: var(--primitive-cream-100);
+    --color-bg-surface: var(--primitive-cream-200);
+    --color-bg-surface-tint: var(--primitive-brown-100);
+    --color-bg-surface-dark: var(--primitive-navy);
+    --color-bg-footer: var(--primitive-charcoal);
+
+    /* --- Borders --- */
+    --color-border-warm: var(--primitive-gold);
+    --color-border-dark: var(--primitive-brown-100);
+    --color-border-accent: var(--primitive-gold-dark);
+
+    /* --- UI States --- */
+    --color-hover-overlay: rgba(var(--primitive-navy-rgb), 0.08);
+    --color-focus-ring: #a0522d;
+
+    /* --- Shadows --- */
+    --box-shadow-light: 0 10px 15px rgba(0, 0, 0, 0.2);
+    --box-shadow-medium: 0 10px 15px rgba(0, 0, 0, 0.5);
+    --box-shadow-heavy: 0 10px 15px rgba(0, 0, 0, 1);
+    --box-shadow-top: 0 -5px 15px rgba(0, 0, 0, 1);
+
+    /* --- Text --- */
+    --color-text-primary: var(--primitive-navy);
+    --color-text-secondary: var(--primitive-gold);
+    --color-text-accent: var(--primitive-crimson);
+    --color-text-muted: var(--primitive-brown-100);
+    --color-text-light: var(--primitive-cream-200);
+
+    /* --- Typography --- */
+    --font-family-body: var(--primitive-font-main);
+    --font-family-heading: var(--primitive-font-heading);
+    --font-family-accent: var(--primitive-font-accent);
+
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-md: 1.125rem; /* 18px — body default */
+    --font-size-lg: 1.3rem;
+    --font-size-xl: 1.5rem;
+
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-heading: 400; /* Cinzel looks best at regular */
+
+    --line-height-tight: 1.2;
+    --line-height-body: 1.6;
+
+    /* --- Spacing Scale (number × 0.25rem) --- */
+    --space-1: 0.25rem; /*  4px */
+    --space-2: 0.5rem; /*  8px */
+    --space-3: 0.75rem; /* 12px */
+    --space-4: 1rem; /* 16px */
+    --space-5: 1.25rem; /* 20px */
+    --space-6: 1.5rem; /* 24px */
+    --space-8: 2rem; /* 32px */
+    --space-10: 2.5rem; /* 40px */
+    --space-12: 3rem; /* 48px */
+    --space-16: 4rem; /* 64px */
+    --space-20: 5rem; /* 80px */
+    --space-24: 6rem; /* 96px */
+    --space-28: 7rem; /* 112px */
+
+    /* --- Layout --- */
+    --container-width: 1600px;
+
+
+    /* ------------------------------------------------------------
+       3. COMPONENT TOKENS
+       Map semantic tokens to specific components.
+       Change a component's look here without touching its CSS.
+       ------------------------------------------------------------ */
+
+    /* --- Header --- */
+    --navbar-height: 80px;
+    --navbar-menu-height: 40vh;
+
+    --navbar-color-bg: var(--color-bg-surface-dark);
+    --navbar-color-gradient: linear-gradient(90deg, rgba(4, 20, 31, 1) 2%, rgba(44, 62, 80, 0.8) 87%);
+    --navbar-color-gradient-hover: linear-gradient(90deg, rgba(4, 20, 31, 1) 2%, rgba(44, 62, 80, 1) 87%);
+
+    --navbar-menu-color-bg: var(--color-bg-surface-dark);
+
+    --navbar-color-text: var(--color-text-light);
+    --navbar-color-heading: var(--color-text-secondary);
+    --navbar-color-menu-link: var(--primitive-cream-300);
+    --navbar-color-border: var(--color-border-warm);
+    --navbar-color-column-divider: var(--color-border-warm);
+    --navbar-color-btn-category: var(--primitive-gold);
+    --navbar-color-btn-selected: var(--primitive-crimson);
+
+    --navbar-font-family: var(--font-family-body);
+    --navbar-font-size: var(--font-size-md);
+    --navbar-font-size-header: var(--font-size-lg);
+    --navbar-font-weight: var(--font-weight-light);
+    --navbar-font-weight-header: var(--font-weight-semibold);
+
+    --navbar-box-shadow: var(--box-shadow-medium);
+
+    /* --- Hero --- */
+    --hero-color-heading-text: var(--color-text-light);
+    --hero-color-text: var(--color-text-light);
+    --hero-font-size: var(--font-size-md);
+    --hero-font-weight: var(--font-weight-light);
+    --hero-font-weight-heading: var(--font-weight-medium);
+    --hero-line-height: var(--line-height-tight);
+    --hero-color-btn-primary: var(--primitive-gold);
+
+}
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+
+body {
+    font-family: var(--font-family-body), sans-serif;
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-primary);
+    line-height: var(--line-height-body);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-text-primary);
+    font-family: var(--font-family-heading), serif;
+    font-weight: var(--font-weight-heading);
+    letter-spacing: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--container-width);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 var(--space-5);
+}
+
+.container-sm {
+    max-width: 700px;
+}
+
+.btn {
+    width: fit-content;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: var(--space-12);
+    border: 2px solid rgb(from var(--color-text-accent) r g b / 1);
+    font-family: var(--font-family-heading), serif;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-medium);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+    color: rgb(from var(--color-text-primary) r g b / 1);
+    border: 2px solid var(--color-border-accent);
+    background-color: rgb(from var(--color-border-accent) r g b / 0.1);
+    text-decoration: none;
+}
+
+.accent-txt-gold {
+    font-family: var(--font-family-accent), cursive;
+    color: var(--color-text-secondary);
+    font-size: 5rem;
+}
+
+.accent-txt-red {
+    font-family: var(--font-family-accent), cursive;
+    color: var(--color-text-accent);
+    font-weight: var(--font-weight-light);
+    font-size: 5rem;
+}

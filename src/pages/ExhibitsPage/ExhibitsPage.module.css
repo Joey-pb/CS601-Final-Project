@@ -1,0 +1,15 @@
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.frame {
+    background-image: url('/svg/frames/heading-frame.svg');
+    display: inline-block;
+    padding: var(--space-28);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
