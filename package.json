@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage": "https://Joey-pb.github.io/CS601-Final-Project",
+    "homepage": "https://joey-pb.github.io/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
