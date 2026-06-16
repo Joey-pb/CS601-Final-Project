@@ -12,7 +12,7 @@ import {articlesData} from "./data/articles.data.ts";
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App/>}>
-            <Route path="" element={<LandingPage/>}/>
+            <Route index element={<LandingPage/>}/>
             <Route path="/exhibits" element={<ExhibitsPage/>}/>
             <Route path="/exhibits/:exhibitId" element={<ExhibitDetailPage/>}/>
             <Route path="/programs" element={<Article articles={articlesData.programs}/>}/>
