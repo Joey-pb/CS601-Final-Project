@@ -13,6 +13,7 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App/>}>
             <Route path="" element={<LandingPage/>}/>
+            <Route path="/CS601-Final-Project" element={<LandingPage />} />
             <Route path="/exhibits" element={<ExhibitsPage/>}/>
             <Route path="/exhibits/:exhibitId" element={<ExhibitDetailPage/>}/>
             <Route path="/programs" element={<Article articles={articlesData.programs}/>}/>
