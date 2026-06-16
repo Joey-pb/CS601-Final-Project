@@ -1,9 +1,10 @@
 .frame {
-    height: 700px;
-    background-image: url('/svg/frames/error-frame.svg');
+    width: 700px;
+    background-image: url('/svg/frames/heading-frame.svg');
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: var(--space-20);
     padding: var(--space-28);
     background-size: 100% 100%;
     background-repeat: no-repeat;
