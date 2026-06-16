@@ -21,11 +21,11 @@ function ExhibitsPage() {
         <>
             <Hero heading={hero.heading} text={hero.text} image={hero.image}/>
             <h2 className={styles['section-heading']}>
-                <div className={styles.frame}>The Old World</div>
+                <div className={styles.frame} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}svg/frames/heading-frame.svg)` }}>The Old World</div>
             </h2>
             <CardContainer cards={oldWorldCards}/>
             <h2 className={styles['section-heading']}>
-                <div className={styles.frame}>The New World</div>
+                <div className={styles.frame} style={{ backgroundImage: `url(${import.meta.env.BASE_URL}svg/frames/heading-frame.svg)` }}>The New World</div>
             </h2>
             <CardContainer cards={newWorldCards}/>
         </>
