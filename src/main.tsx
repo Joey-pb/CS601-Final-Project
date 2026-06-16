@@ -13,14 +13,14 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path="/" element={<App/>}>
             <Route path="" element={<LandingPage/>}/>
-            <Route path="/CS601-Final-Project" element={<LandingPage />} />
             <Route path="/exhibits" element={<ExhibitsPage/>}/>
             <Route path="/exhibits/:exhibitId" element={<ExhibitDetailPage/>}/>
             <Route path="/programs" element={<Article articles={articlesData.programs}/>}/>
             <Route path="/podcast" element={<Article articles={articlesData.podcast}/>}/>
             <Route path="*" element={<ErrorPage/>}/>
         </Route>
-    )
+    ),
+    { basename: import.meta.env.BASE_URL }
 )
 
 createRoot(document.getElementById('root')!).render(
