@@ -9,7 +9,7 @@ export const homePage: IBasePage = {
             </>
         ),
         image: {
-            url: "/images/home-hero.jpg",
+            url: `${import.meta.env.BASE_URL}images/home-hero.jpg`,
             alt: "Yeoman at the English Farm."
         },
         // link: {
@@ -29,7 +29,7 @@ export const homePage: IBasePage = {
             ),
             text: "Across centuries and farms, explore homelands and the frontiers of America's past. Discover how diverse cultures shaped the American frontier.",
             image: {
-                url: "/images/english-farm-harvest.jpg",
+                url: `${import.meta.env.BASE_URL}images/english-farm-harvest.jpg`,
                 alt: "18th-century woman walking in front of a German farm."
             },
             link: {
@@ -47,7 +47,7 @@ export const homePage: IBasePage = {
             ),
             text: "Another way for you to enjoy the Frontier Culture Museum is with our podcast, Banjo Strings and Drinking Gourds: How American Culture Came to Be. Throughout this ongoing series, we’ll be covering historic topics such as medicine, architecture, and art. You’ll also get a behind-the-scenes look at a living history museum.",
             image: {
-                url: "/images/klim-musalimov-fxHq67K11-E-unsplash.jpg",
+                url: `${import.meta.env.BASE_URL}images/klim-musalimov-fxHq67K11-E-unsplash.jpg`,
                 alt: "Podcast microphone.",
             },
             link: {
@@ -65,7 +65,7 @@ export const homePage: IBasePage = {
             ),
             text: "The Museum’s field trip and outreach education programs address the lives, choices, and environments of people represented by our exhibits. Programs include many hands-on activities related to farming, cooking, tools, animals, chores, and more.",
             image: {
-                url: "/images/mael-balland-knQzMl3FKtg-unsplash.jpg",
+                url: `${import.meta.env.BASE_URL}images/mael-balland-knQzMl3FKtg-unsplash.jpg`,
                 alt: "Scouts camping.",
             },
             link: {

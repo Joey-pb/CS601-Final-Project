@@ -18,7 +18,7 @@ function ContentBlockImageFrame(props: { section: IContent[] }) {
                     <div className={`container ${styles['section-wrapper']}`}>
                         <div className={styles["section-col"]}>
                             <div className={styles.frame}
-                                 style={{backgroundImage: `url("/svg/frames/frame-full-${index + 1}.svg")`}}>
+                                 style={{backgroundImage: `url(${import.meta.env.BASE_URL}svg/frames/frame-full-${index + 1}.svg)`}}>
                                 {section.image &&
                                     <img className={styles["section-img"]} src={section.image.url}
                                          alt={section.image.alt}/>}

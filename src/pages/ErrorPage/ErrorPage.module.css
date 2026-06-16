@@ -1,6 +1,6 @@
 .frame {
     width: 700px;
-    background-image: url('/svg/frames/heading-frame.svg');
+
     display: flex;
     justify-content: center;
     align-items: center;

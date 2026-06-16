@@ -55,7 +55,7 @@ function Header() {
                             </button>
                             <img
                                 className={`${styles.underline} ${activeTab === key ? styles.visible : styles["not-visible"]}`}
-                                src="/svg/underline.svg" alt="Underline"/>
+                                src={`${import.meta.env.BASE_URL}svg/underline.svg`} alt="Underline"/>
                         </div>
                     ))}
                 </div>

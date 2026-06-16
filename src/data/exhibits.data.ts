@@ -13,6 +13,8 @@ export interface IExhibits {
     newWorld: IExhibit[];
 }
 
+const base = import.meta.env.BASE_URL;
+
 export const exhibitsData: IExhibits = {
     oldWorld: [
         {
@@ -22,12 +24,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/west-africa.png",
+                    url: `${base}images/exhibits/west-africa.png`,
                     alt: "The West African farm"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-west-africa.png",
+                    url: `${base}images/exhibits/cards/card-west-africa.png`,
                     alt: "The West African farm",
                 }
             ],
@@ -40,12 +42,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/english-farm.png",
+                    url: `${base}images/exhibits/english-farm.png`,
                     alt: "The English farm"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-english-farm.png",
+                    url: `${base}images/exhibits/cards/card-english-farm.png`,
                     alt: "The English farm"
                 }
             ],
@@ -58,12 +60,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/irish-forge.png",
+                    url: `${base}images/exhibits/irish-forge.png`,
                     alt: "The Irish forge"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-irish-forge.png",
+                    url: `${base}images/exhibits/cards/card-irish-forge.png`,
                     alt: "The Irish forge"
                 }
             ],
@@ -76,12 +78,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/irish-farm.png",
+                    url: `${base}images/exhibits/irish-farm.png`,
                     alt: "The Irish farm"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-irish-farm.png",
+                    url: `${base}images/exhibits/cards/card-irish-farm.png`,
                     alt: "The Irish farm"
                 }
             ],
@@ -94,12 +96,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/german-farm.png",
+                    url: `${base}images/exhibits/german-farm.png`,
                     alt: "The German farm"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-german-farm.png",
+                    url: `${base}images/exhibits/cards/card-german-farm.png`,
                     alt: "The German farm"
                 }
             ],
@@ -114,12 +116,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/native-america.png",
+                    url: `${base}images/exhibits/native-america.png`,
                     alt: "The Native American site"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-native-america.png",
+                    url: `${base}images/exhibits/cards/card-native-america.png`,
                     alt: "The Native American site"
                 }
             ],
@@ -129,14 +131,15 @@ export const exhibitsData: IExhibits = {
             id: "1760s",
             name: "1760s",
             description: "Experience life on Virginia's frontier during the years leading up to the American Revolution.",
-            image: [{
-                type: "hero",
-                url: "/images/exhibits/1760s.png",
-                alt: "The 1760s cabin"
-            },
+            image: [
+                {
+                    type: "hero",
+                    url: `${base}images/exhibits/1760s.png`,
+                    alt: "The 1760s cabin"
+                },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-1760s.png",
+                    url: `${base}images/exhibits/cards/card-1760s.png`,
                     alt: "The 1760s cabin"
                 }
             ],
@@ -149,12 +152,12 @@ export const exhibitsData: IExhibits = {
             image: [
                 {
                     type: "hero",
-                    url: "/images/exhibits/1820s.png",
+                    url: `${base}images/exhibits/1820s.png`,
                     alt: "The 1820s farm"
                 },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-1820s.png",
+                    url: `${base}images/exhibits/cards/card-1820s.png`,
                     alt: "The 1820s farm"
                 }
             ],
@@ -164,14 +167,15 @@ export const exhibitsData: IExhibits = {
             id: "1850s",
             name: "1850s",
             description: "Explore a thriving farm during the decades before the Civil War.",
-            image: [{
-                type: "hero",
-                url: "/images/exhibits/1850s.png",
-                alt: "The 1850s farm"
-            },
+            image: [
+                {
+                    type: "hero",
+                    url: `${base}images/exhibits/1850s.png`,
+                    alt: "The 1850s farm"
+                },
                 {
                     type: "card",
-                    url: "/images/exhibits/cards/card-1850s.png",
+                    url: `${base}images/exhibits/cards/card-1850s.png`,
                     alt: "The 1850s farm"
                 }
             ],

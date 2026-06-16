@@ -20,7 +20,7 @@ export const eventsData: IEvent[] = [
         startTime: "9:00 am",
         endTime: "5:00 pm",
         image: {
-            url: "/images/rusty-watson-1WNLN0fagTA-unsplash.jpg",
+            url: `${import.meta.env.BASE_URL}images/rusty-watson-1WNLN0fagTA-unsplash.jpg`,
             alt: "Militia firing muskets."
         },
         description: "In 1809, the Staunton Eagle recorded Independence Day as “ About 50 gentlemen and a number of ladies…partook of a plain Barbecue, where none but Domestic productions were eaten…In short, the whole afternoon was spend with a good humor, harmony, and joy, which the fourth of July ought always to inspire into the bosoms of Americans.”  \n" +
@@ -43,7 +43,7 @@ export const eventsData: IEvent[] = [
         startTime: "9:00 am",
         endTime: "5:00 pm",
         image: {
-            url: "/images/homeschool-days.jpg",
+            url: `${import.meta.env.BASE_URL}images/homeschool-days.jpg`,
             alt: "Schoolmaster and students at a school."
         },
         description: "Come see all the activities we have planned for our Fall Homeschool Days! Homeschool days provide homeschoolers the chance to participate in the increased hands-on experience of a field trip. Try your hand at splitting a log to make fence rails or experience an early 19th century school lesson! Pre-registration is highly recommended, but tickets may also be purchased at the Visitor’s Center on the day of the event.  \n" +
